@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Are+You+Serious&display=swap');
+@import 'variables';
+
+
+*{
+  font-family: 'Are You Serious', cursive;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container{
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 50px 150px;
+  width: 100%;
+  background-color: black; 
+}
+
+.pictures_relative{
+  position: relative;
+  height: 100%;
+  width: 30%;
+}
+
+.--flex_center{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.--flex_end{
+  display: flex;
+  justify-content: end;
+  align-content: center;
+  z-index: 100;
+}
+
+.--flex-column{
+  flex-direction: column
+}
+
+.--flex_self_center{
+  align-self: center;
+}
+
+.--mt_32{
+  margin-top: 8rem;
+}

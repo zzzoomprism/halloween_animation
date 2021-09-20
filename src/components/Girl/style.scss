@@ -1,0 +1,30 @@
+.brown_rotate{
+  transform-box: fill-box;
+  transform-origin: center;
+  &--0{
+    transform: rotate(-15deg);
+  }
+  &--1{
+    transform: rotate(15deg);
+  }
+}
+
+.girl_absolute{
+  position: absolute;
+  z-index: 1000;
+  top: 250px;
+  left: 0px;
+
+  &--animate{
+    animation: girl_scared 100ms 1500ms linear alternate infinite;
+  }
+}
+
+@keyframes girl_scared{
+  from{
+    transform: rotate(-3deg)
+  }
+  to{
+    transform: rotate(3deg);
+  }
+}

@@ -1,0 +1,37 @@
+.clown_absolute{
+  position: absolute;
+
+  top: 250px;
+  left: -10px;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(-30deg);
+  opacity: 0;
+
+  &--size{
+    width: 250px;
+    height: 250px;
+  }
+
+  &--animate{
+    animation: clown_animate 3000ms 500ms ease-out alternate;
+  }
+}
+
+@keyframes clown_animate{
+  0%{
+    opacity: 0.3;
+    transform: rotate(-30deg) translate(0,0) scale(1, 1);
+  }
+  5%{
+    opacity: 0.5;
+    transform: rotate(-28deg) translate(-20px,-20px) scale(1.2, 1.2);
+  }
+  80%{
+    opacity: 1;
+    transform: rotate(-30deg) translate(-50px,-50px) scale(1.5, 1.5);
+  }
+  100%{
+    opacity: 0;
+  }
+}

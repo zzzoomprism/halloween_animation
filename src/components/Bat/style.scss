@@ -1,0 +1,64 @@
+.bat{
+
+  offset-path: path('M -400 -53 Q -124.48 711.6 89 530 Q 654.88 -15.6 818.88 0.8 C 1065.44 38.2 1039.04 422.8 859 647 C 340 1224 190 113 -40 337 Q -271 592 -400 1482');
+  offset-distance: 0;
+  transform: rotate(-90deg);
+  animation: move 30s infinite;
+  width: 100px;
+  height: 100px;
+}
+
+.bat-right-wing{
+  transform:  rotate(-5deg), translate(-20px, 0);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: right_wing 0.500s infinite alternate;
+}
+
+.bat-left-wing{
+  transform:  rotate(-5deg), translate(20px, 0);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: left_wing 0.500s infinite alternate;
+}
+
+@keyframes right_wing{
+  0%{
+    transform: rotate(-15deg) translate(0px, 0px);
+  }
+  100%{
+    transform: rotate(5deg) translate(-30px, 0px);
+  }
+}
+@keyframes left_wing{
+  0%{
+    transform: rotate(15deg) translate(30px, 0px);
+  }
+  100%{
+    transform: rotate(-5deg) translate(0, 0);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(-90deg);
+    opacity: 0;
+    offset-distance: 100%;
+  }
+  20%{
+    transform: rotate(-90deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+    transform: rotate(-90deg);
+  }
+  90%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(90deg);
+    offset-distance: 0%;
+  }
+}
